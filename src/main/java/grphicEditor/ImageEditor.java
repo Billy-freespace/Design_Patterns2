@@ -27,13 +27,18 @@ public class ImageEditor {
     public static void main(String[] args) {
         ImageEditor imageEditor = new ImageEditor();
         imageEditor.load();
+
+        ArrayList<Graphic> components = new ArrayList<Graphic>();
+
         Dot dot = new Dot(1.2, 3.4);
+        components.add(dot);
         Circle circle = new Circle(5.6, 7.8, 10);
+        components.add(circle);
+
         CompoundGraphic nestedComponents = new CompoundGraphic();
         nestedComponents.add(new Dot(11, 12));
         nestedComponents.add(new Circle(14, 15, 20.25));
-        Graphic[] graphics = new Graphic[] {dot, circle, nestedComponents};
-        ArrayList<Graphic> components = Arrays<Graphic>.asList(graphics);
+        components.add(nestedComponents);
 
         imageEditor.groupSelected(components);
 

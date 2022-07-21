@@ -32,6 +32,6 @@ public class CompoundGraphic implements Graphic {
         for (Graphic child: children) {
             child.draw();
         }
-        System.out.println("Dibujando rectángulo de línea punteada");
+        //System.out.println("Dibujando rectángulo de línea punteada");
     }
 }
